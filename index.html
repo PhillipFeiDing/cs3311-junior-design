@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>#SSA</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style4.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-secondary navbar-dark fixed-top">
+        <a class="navbar-brand" id="ssa-logo" href="#" target="_self" style="font-family: 'Blackout Sunrise'; transform: scale(1.5); font-style: italic; padding-left: 20px;">#SSA</a>
+        <div id="login-exclusive" class="btn-group login-status-wrapper" style="margin-left: 200px;"role="group" aria-label="First group">
+            <button type="button" class="btn btn-secondary text-warning btn-customize" id="news-button">News</button>
+            <button type="button" class="btn btn-secondary text-warning btn-customize">Member</button>
+            <button type="button" class="btn btn-secondary text-warning btn-customize" id="profile-button">Profile</button>
+            <button type="button" class="btn btn-secondary text-warning btn-customize">Membership</button>
+        </div>
+        <div class="nav navbar-nav ml-auto">
+            <div id="logout-view" class="login-status-wrapper content-active">
+                <button type="button" class="btn btn-primary ml-2 mr-2" id="about-us-button">About Us</button>
+                <button type="button" class="btn btn-primary ml-2 mr-2" id="sign-up-button">Sign Up</button>
+                <button type="button" class="btn btn-primary ml-2 mr-2" id="login-button">Log In</button>
+            </div>
+            <div id="login-view" class="login-status-wrapper">
+                <button type="button" class="btn btn-primary ml-2 mr-2" id="logout-button">Log Out</button>
+                <img id="nav-profile-image" src="old-profile.png" class="rounded-circle" alt="Default Image" width="38px" height="38px"> 
+            </div>
+        </div>
+    </nav>
+    <div style="height: 70px;">
+        <!--filler-->
+    </div>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar" class="bg-secondary" style="position: relative;">
+            <div id="sidebar-wrapper">
+                <div style="text-align: right; margin-bottom: 20px;">
+                    <button id="sidebarCollapse" class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="dark-blue-text">
+                            <svg class="svg-inline--fa fa-bars fa-w-14 fa-1x" aria-hidden="true" data-prefix="fas" data-icon="bars" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="white" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-bars fa-1x"></i> -->
+                        </span>
+                    </button>
+                </div>
+                <div class="CTAs" style="padding-left: 10px;">
+                    <h4 class="mb-4">Link to Other Sites</h4>
+                    <ul>
+                        <li><a href="http://capaciousjournal.com/" target="_blank"><span>Journal</span></a></li>
+                        <li><a href="http://affectsociety.com/" target="_blank"><span>Summer School</span></a></li>
+                        <li><a href="http://capaciousjournal.com/conference/" target="_blank"><span>Conference</span></a></li>
+                    </ul>
+                    <h4>How to join us?</h4>
+                    <div style="padding-left: 50px; margin-bottom: 25px;">
+                        <a href="https://www.facebook.com/groups/WTFAffect/" target="_blank">
+                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        </a>
+                    </div>
+                    <h4 class="mb-4">Upcoming Events</h4>
+                    <ul>
+                        <li>
+                            <a href="#" class="event-click"><span>2020 Summer School<br/>
+                                Date: 04/29/2020<br/>
+                                Location: Wiejc Town, WN</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="event-click"><span>eifji soije<br/>
+                                Date: 04/29/2020<br/>
+                                Location: Wiejc City, WN</span></a>
+                        </li>
+                        <li>
+                            <a href="#" class="event-click"><span>eifji soije<br/>
+                                Date: 04/29/2020<br/>
+                                Location: Wiejc City, WN</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <div id="news-wrapper" class="content-wrapper">
+                <h2>News</h2>
+                <h4>Article ONE</h4>
+                <p>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). </p>
+                <p>Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</p>
+                <br/>
+                <br/>
+                <h4>Article Two</h4>
+                <p>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. </p>
+                <p>In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). </p>
+                <p>Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</p>
+                <br/>
+                <br/>
+                <h4>Article 3</h4>
+                <p>Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. </p>
+                <p>In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). </p>
+                <p>Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</p>
+            </div>
+
+            <div id="events-wrapper" class="content-wrapper">
+                <div class="container" style="margin-top: 150px;">
+                    <div class="row">
+                      <div class="col-sm" style="max-width: 500px;">
+                          <h2>Event Detail</h2>
+                          <h4>Summer School 2020</h4>
+                          <p>are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of.</p>
+                          <p>Siejw:</p>
+                          <p>Eifjo Fksoijw:</p>
+                          <button type="button" class="btn btn-primary">Sign Up</button>
+                      </div>
+                      <div class="col-sm" style="max-width: 500px;">
+                          <img style="display: block; margin-bottom: 20px;" src="map.png" alt="Google Map" width="400px" height="250px">
+                          <h4 class="text-danger" style="margin-bottom: 20px;"><u>Location</u></h4>
+                          <p>
+                            Travel Advice:<br>
+                            Arrive at Buzz Airport, In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. 
+                          </p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="welcome-wrapper" class="content-wrapper">
+                <h1 style="font-size: 50px; text-align: center; margin-top: 150px;">Welcome to SSA Website!</h1>
+            </div>
+
+            <div id="register-wrapper" class="content-wrapper">
+                <div style="margin: 75px auto; width: 60%;">
+                    <h1 style="font-size: 50px;">Welcome to SSA Website!</h1>
+                    <br/>
+                    <h2>Registration: </h2>
+                    <form class="form-horizontal" action="/action_page.php">
+                        <div class="form-group">
+                        <label class="control-label col-sm-2" for="name">Name: </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" placeholder="Enter full name" name="name">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">          
+                            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-sm-2" for="username">Username:</label>
+                        <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-sm-2" for="password">Password:</label>
+                        <div class="col-sm-10">          
+                            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                        </div>
+                        </div>
+                        <div class="form-group" style="text-align: right; margin-top: 40px;">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary ml-2 mr-2" data-toggle="modal" data-target="#exampleModalCenter">Register</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Registration</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    Registration Successful.<br/>Click Continue to be redirected to Login.
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="close-register-modal-button">Continue</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="login-wrapper" class="content-wrapper content-active">
+                <div style="margin: 75px auto; width: 60%;">
+                    <h1 style="font-size: 50px;">Welcome Back! Members</h1>
+                    <br/>
+                    <form class="form-horizontal" action="/action_page.php">
+                        <div class="form-group">
+                        <label class="control-label col-sm-2" for="username">Username:</label>
+                        <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+                        </div>
+                        </div>
+                        <div class="form-group">
+                        <label class="control-label col-sm-2" for="password">Password:</label>
+                        <div class="col-sm-10">          
+                            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+                        </div>
+                        </div>
+                        <div class="form-group" style="text-align: right; margin-top: 40px;">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="button" id="login-content-button" class="btn btn-primary ml-2 mr-2">Log In</button>
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="profile-wrapper" class="content-wrapper">
+                <div style="margin: 50px auto; width: 75%;">
+                    <h1 style="font-size: 50px; text-align: center;">Welcome to SSA Website!</h1>
+                    <br/>
+                    <h2 style="text-align: center;">My Profile</h1>
+                    <br/>
+                    <div class="container">
+                        <div class="row">
+                          <div class="col">
+                              <div class="container">
+                                  <div class="row mt-2">
+                                        <div class="col-5"><span class="profile-text">Name:</span></div>
+                                        <div class="col-7">
+                                            <div class="profile-info profile-info-display">
+                                                <input type="text" class="form-control" id="profile-name-input" placeholder="Enter name" name="name">
+                                            </div>
+                                            <div class="profile-info">
+                                                <span class="profile-text" id="profile-name-display"></span>
+                                            </div>
+                                        </div>
+                                  </div>
+                                  <div class="row mt-2">
+                                    <div class="col-5"><span class="profile-text">Gender:</span></div>
+                                    <div class="col-7">
+                                        <div class="profile-info profile-info-display">
+                                            <select class="form-control" id="profile-gender-input">
+                                                <option></option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Non-binary</option>
+                                                <option>Prefer not to say</option>
+                                            </select>
+                                        </div>
+                                        <div class="profile-info">
+                                            <span class="profile-text" id="profile-gender-display"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-5"><span class="profile-text">Institute:</span></div>
+                                    <div class="col-7">
+                                        <div class="profile-info profile-info-display">
+                                            <select class="form-control" id="profile-institute-input">
+                                                <option></option>
+                                                <option>Georgia Institute of Technology</option>
+                                                <option>University of Georgia</option>
+                                                <option>Georgia State University</option>
+                                                <option>Virgina Institute of Technology</option>
+                                                <option>Stanford University</option>
+                                                <option>Carnegie Mellon University</option>
+                                                <option>University of California Berkeley</option>
+                                                <option>Massachusetts Institute of Technology</option>
+                                                <option>University of Illinois Urbana-Champaign</option>
+                                                <option>University of Michigan Ann Arbor</option>
+                                            </select>
+                                        </div>
+                                        <div class="profile-info">
+                                            <span class="profile-text" id="profile-institute-display"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-5"><span class="profile-text">Siejw:</span></div>
+                                    <div class="col-7">
+                                        <div class="profile-info profile-info-display">
+                                            <input type="text" class="form-control" id="profile-siejw-input" placeholder="Enter Siejw" name="siejw">
+                                        </div>
+                                        <div class="profile-info">
+                                            <span class="profile-text" id="profile-siejw-display"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-5"><span class="profile-text">Eifjo Fksoijw:</span></div>
+                                    <div class="col-7">
+                                        <div class="profile-info profile-info-display">
+                                            <input type="text" class="form-control" id="profile-eifjo-fksoijw-input" placeholder="Enter eifjo fksoijw" name="eifjo-fksoijw">
+                                        </div>
+                                        <div class="profile-info">
+                                            <span class="profile-text" id="profile-eifjo-fksoijw-display"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 50px;">
+                                    <div class="col"></div>
+                                    <div class="col">
+                                        <div class="profile-info profile-info-display">
+                                            <button type="button" class="btn btn-primary" id="save-profile-button">Save</button>
+                                        </div>
+                                        <div class="profile-info">
+                                            <button type="button" class="btn btn-primary" id="edit-profile-button">Edit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="col" style="text-align: center; max-width: 400px;">
+                              <div>
+                                  <img id="profile-profile-image" src="old-profile.png" class="rounded-circle" alt="Default Image" width="200px" height="200px"> 
+                              </div>
+                                <div style="margin-top: 50px;">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">Change My Image</button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle2">Change Profile Picture</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <div style="width: 320px; height: 200px; background: #ddd;">
+                                                                    <img id="window-profile-image" src="old-profile.png" class="rounded-circle" alt="Default Image" width="180px" height="180px" style="margin-top: 10px;">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col"><button type="button" class="btn btn-primary" style="margin-top: 80px;" id="upload-button">Upload</button></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="close-register-modal-button2">Change</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="membership-wrapper" class="content-wrapper">
+                <div style="margin: 50px auto; width: 75%;">
+                    <h1 style="font-size: 50px; text-align: center;">Welcome to SSA Website!</h1>
+                    <br/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #sidebar-wrapper').toggleClass('active');
+            });
+
+            $('.event-click').on('click', () => {
+                activatePage('events-wrapper')
+            })
+
+            $('#news-button').on('click', () => {
+                activatePage('news-wrapper')
+            })
+
+            $('#about-us-button, #ssa-logo').on('click', () => {
+                activatePage('welcome-wrapper')
+            })
+
+            $('#sign-up-button').on('click', () => {
+                activatePage('register-wrapper')
+            })
+
+            $('#login-button').on('click', () => {
+                activatePage('login-wrapper')
+            })
+
+            $('#login-content-button').on('click', () => {
+                login()
+            })
+
+            $('#logout-button').on('click', () => {
+                logout()
+            })
+
+            $('#close-register-modal-button').on('click', () => {
+                activatePage('login-wrapper')
+            })
+
+            $('#profile-button').on('click', () => {
+                activatePage('profile-wrapper')
+            })
+
+            $('#save-profile-button').on('click', () => {
+                saveProfile()
+            })
+
+            $('#edit-profile-button').on('click', () => {
+                editProfile()
+            })
+
+            $('#upload-button').on('click', () => {
+                $('#window-profile-image').attr('src', 'new-profile.jpg')
+            })
+
+            $('#close-register-modal-button2').on('click', () => {
+                $('#nav-profile-image, #profile-profile-image').attr('src', $('#window-profile-image').attr('src'))
+            })
+        });
+
+        function activatePage(page) {
+            $('.content-wrapper').removeClass('content-active')
+            $('#' + page).addClass('content-active')
+        }
+
+        function login() {
+            $('.login-status-wrapper').removeClass('content-active')
+            $('#login-exclusive, #login-view').addClass('content-active')
+            activatePage('welcome-wrapper')
+        }
+
+        function logout() {
+            $('.login-status-wrapper').removeClass('content-active')
+            $('#logout-view').addClass('content-active')
+        }
+
+        function saveProfile() {
+            const fields = [
+                'name',
+                'gender',
+                'institute',
+                'siejw',
+                'eifjo-fksoijw'
+            ]
+            fields.forEach((field) => {
+                let val = $('#' + 'profile-' + field + '-input').val()
+                if (!val) {
+                    val = $('#' + 'profile-' + field + '-input').children("option:selected").val()
+                }
+                $('#' + 'profile-' + field + '-display').html(val)
+            })
+            $('.profile-info').toggleClass('profile-info-display')
+        }
+
+        function editProfile() {
+            $('.profile-info').toggleClass('profile-info-display')
+        }
+    </script>
+</body>
+
+</html>
